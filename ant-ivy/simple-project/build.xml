@@ -38,7 +38,7 @@
     <ivy:resolve>
     <ivy:deliver deliverpattern="${build.dir}/ivy.xml" pubrevision="${ivy.revision}" status="release"/>
     <ivy:makepom ivyfile="${build.dir}/ivy.xml" pomfile="${build.dir}/${ivy.module}.pom"/>
-    <ivy:resolve/>
+    </ivy:resolve>
     <ivy:publish resolver="nexus-releases"
                  pubrevision="${ivy.revision}"
                  status="${publish.status}"

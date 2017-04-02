@@ -35,6 +35,7 @@
   </target>
 
   <target name="deploy" depends="jar">
+    <ivy:resolve>
     <ivy:deliver deliverpattern="${build.dir}/ivy.xml" pubrevision="${ivy.revision}" status="release"/>
     <ivy:makepom ivyfile="${build.dir}/ivy.xml" pomfile="${build.dir}/${ivy.module}.pom"/>
     <ivy:resolve/>

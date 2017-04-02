@@ -20,8 +20,8 @@
   </target>
 
   <target name="init" depends="install-ivy">
-    <ivy:settings file="ivysettings.xml" />
-    <ivy:retrieve/>
+   <!--  <ivy:settings file="ivysettings.xml" /> -->
+    <!-- <ivy:retrieve/> -->
   </target>
 
   <target name="compile" depends="init">

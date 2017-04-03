@@ -21,7 +21,7 @@
 
   <target name="init" depends="install-ivy">
   <ivy:settings file="ivysettings.xml" />
-    <ivy:retrieve pattern="${lib.dir}/[conf]/[artifact].[ext]" sync="true" />
+    <ivy:retrieve/>
   </target>
 
   <target name="compile" depends="init">

@@ -38,11 +38,11 @@
     <ivy:deliver deliverpattern="${build.dir}/ivy.xml" pubrevision="${ivy.revision}" status="release"/>
     <ivy:makepom ivyfile="${build.dir}/ivy.xml" pomfile="${build.dir}/${ivy.module}.pom"/>
     <ivy:resolve/>
-    <ivy:publish resolver="nexus-releases"
+    <ivy:publish resolver="nexus-deploy"
                  pubrevision="${ivy.revision}"
                  status="${publish.status}"
                  overwrite="true" 
-                 publishivy="true" >
+                 publishivy="false" >
       <artifacts pattern="${build.dir}/[artifact].[ext]" />
     </ivy:publish>
   </target>
